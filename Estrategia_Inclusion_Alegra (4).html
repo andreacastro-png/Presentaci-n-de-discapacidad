@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="es"><head><script>(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6ImQzMmE5NGU0NjFmNjZhODQ0YWFhYTY1NjdiZWM4OWY2NWIzMzg0ODQiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIwMDgwOTQ2NTM2MDAwNTQ0Mjg5OSIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjX2EwOWQxNGE1ZGRhNmViZTRfZXN0cmF0ZWdpYV9pbmNsdXNpb25fYWxlZ3JhX3Jlc3RhdXJhZGEuaHRtbC03MTQifSwiZXhwIjoxNzczMTgwMDU2LCJpYXQiOjE3NzMxNzY0NTYsImFsZyI6IlJTMjU2In0.YVJlQyoVt7YKCkFYgDPegjIE5fzg4V56iiw6CIb7Ui3Q4U9wgkzmc7fOE2XRzNy5LjqnyB5neFJfhNEsXgD9PSyQw1bHKIVzvYFVdQIOCSXCW8zNpwy5gqeDS-q9Pmgv-b2md64SBfNdwpAiQQ1eF7ePZNXgrqzmVz9LOHeOOqH8_smvGa3d1ZWDKITVTrBZcsyL74a4cTDc-2Vn1vRFU6oqT8X2hZrSZKqZ8rmO_n444e6gylDuNsEbKq_wEhR9vR9ka37kNtLZTlY7a8WNEB3X-tEHN38lid6h37KdsPNv6kvSNoVWTQibbNa34ZCWN5WjXr98iY6dWswwdlpfUw","c_a09d14a5dda6ebe4_estrategia_inclusion_alegra_restaurada.html-714")</script><script>(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){const d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);const c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{let a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){const b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{const c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){const c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{const c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){const c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);const e=yield c.blob();return new Promise((f,g)=>{const k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){let c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){const c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());let e;try{const f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){const b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");const c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;let c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){const c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{let g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){const g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){const b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{const e=d?(new URL(b,d||void 0)).toString():b;let f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){const [c,,e]=ia.exec(d)||[],f=c,g=e;if(!g)return"";if(g===b)return`src: ${f};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;const c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c;const e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){const d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){const d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){let d=a.cssText;const c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){let g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];const b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){const d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){const g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}const d=new Set;b(a);return d}function ua(a,b){return t(function*(){const d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){const d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){const c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b);var e=yield wa(a,b);e=yield B(e);const f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=
+16384));f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;const c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){const a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){let b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){const b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+})();</script><script>(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script>
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script>((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-2.5-flash-image-preview","imageTransformModelName":"gemini-3-pro-image-preview-11-2025","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"]})</script><script>(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script>(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrategia de Inclusión Laboral - Alegra C-Level</title>
+    
+    <!-- Fuentes Oficiales: Lexend e Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lexend:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    
+    <!-- Librería de Íconos Oficial: Tabler Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    
+    <style>
+        /* 1. SETUP Y VARIABLES DE MARCA */
+        :root {
+            /* Colores Primarios */
+            --brand-green: #00D6BC;
+            --blue-brand: #18283F;
+            --pure-white: #FFFFFF;
+            
+            /* Colores Acento y Secundarios */
+            --vibrant-green: #06ECD0;
+            --light-green: #CFF2F1;
+            --dark-green: #1A7E7F;
+            
+            /* Colores Apoyo (Slate / Neutrales) */
+            --light-grey: #F8FAFC;
+            --slate-100: #F1F5F9;
+            --slate-300: #CBD5E1;
+            --slate-700: #334155;
+            --slate-800: #1E2938;
+            --black-brand: #0F172A;
+        }
+
+        * { box-sizing: border-box; }
+        p { margin: 0; margin-bottom: 15px; }
+
+        body {
+            background-color: var(--slate-300);
+            display: grid;
+            gap: 40px;
+            grid-template-columns: 1fr;
+            margin: 0;
+            min-height: 100vh;
+            padding: 40px 0;
+            place-items: center;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+        }
+
+        /* 2. SLIDE CONTAINER BASE */
+        .slide-container {
+            align-items: center;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 720px;
+            justify-content: center;
+            overflow: hidden;
+            padding: 60px;
+            position: relative;
+            width: 1280px;
+            max-width: 95vw;
+        }
+
+        /* 3. TEMAS DE COLOR */
+        .theme-dark { background-color: var(--blue-brand); color: var(--pure-white); }
+        .theme-dark h1, .theme-dark h2, .theme-dark h3 { color: var(--pure-white); }
+        .theme-dark .highlight { color: var(--vibrant-green); }
+        .theme-dark p, .theme-dark li { color: var(--slate-100); }
+        .theme-dark .card { background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
+
+        .theme-light { background-color: var(--light-grey); color: var(--blue-brand); }
+        .theme-light h1, .theme-light h2, .theme-light h3 { color: var(--blue-brand); }
+        .theme-light .highlight { color: var(--brand-green); }
+        .theme-light p, .theme-light li { color: var(--slate-700); }
+        .theme-light .card { background-color: var(--pure-white); border: 1px solid var(--slate-300); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+
+        .theme-green { background-color: var(--brand-green); color: var(--blue-brand); }
+        .theme-green h1, .theme-green h2, .theme-green h3 { color: var(--blue-brand); }
+        .theme-green .highlight { color: var(--pure-white); }
+        .theme-green p, .theme-green li { color: var(--blue-brand); font-weight: 500; }
+        .theme-green .card { background-color: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.3); }
+
+        /* 4. TIPOGRAFÍA */
+        h1, h2, h3, .brand-font { font-family: 'Lexend', sans-serif; margin: 0; line-height: 1.2; }
+        h1 { font-size: 72px; font-weight: 800; margin-bottom: 24px; letter-spacing: -1px; }
+        .slide-title { font-size: 48px; font-weight: 700; margin-bottom: 40px; text-align: left; width: 100%; letter-spacing: -0.5px; }
+        h3 { font-size: 26px; font-weight: 600; margin-bottom: 12px; }
+        p, li, .subtitle { font-size: 19px; line-height: 1.5; font-family: 'Inter', sans-serif; }
+        .subtitle { font-size: 22px; font-weight: 400; margin: 20px auto; max-width: 900px; }
+
+        /* 5. COMPONENTES Y LAYOUTS */
+        .content-area { align-items: flex-start; display: flex; flex-direction: column; flex-grow: 1; justify-content: center; width: 100%; }
+        .title-layout { text-align: center; width: 100%; z-index: 2; }
+        .two-column { align-items: center; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; width: 100%; }
+        .two-column.tiled { align-items: stretch; }
+        .card { border-radius: 12px; padding: 40px; text-align: left; display: flex; flex-direction: column; justify-content: center; transition: transform 0.3s ease; }
+
+        ul { list-style: none; margin: 0; padding: 0; }
+        .two-column li { margin-bottom: 15px; padding-left: 35px; position: relative; }
+        .two-column li i { position: absolute; left: 0; top: 4px; font-size: 24px; }
+        .theme-dark .two-column li i { color: var(--vibrant-green); }
+        .theme-light .two-column li i { color: var(--brand-green); }
+        .theme-green .two-column li i { color: var(--pure-white); }
+
+        .image-wrapper { border-radius: 16px; height: 380px; width: 100%; overflow: hidden; box-shadow: 0 20px 40px rgba(24, 40, 63, 0.15); display: flex; align-items: center; justify-content: center; }
+        .image-wrapper img { height: 100%; width: 100%; object-fit: cover; }
+
+        .tiled-content { display: flex; gap: 30px; width: 100%; }
+        .tile { flex: 1; padding: 35px 25px; justify-content: flex-start; }
+        .tile .icon { font-size: 40px; margin-bottom: 20px; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; border-radius: 16px; }
+        .theme-dark .tile .icon { color: var(--vibrant-green); background-color: rgba(6, 236, 208, 0.1); }
+        .theme-light .tile .icon { color: var(--brand-green); background-color: var(--light-green); }
+
+        .highlight-numbers-layout > div:first-child { flex: 0 0 40%; }
+        .number { font-size: 90px; font-weight: 800; font-family: 'Lexend', sans-serif; line-height: 1; margin-bottom: 5px; letter-spacing: -2px; }
+        .theme-dark .number { color: var(--vibrant-green); }
+        .theme-light .number { color: var(--brand-green); }
+        .number-label { font-size: 20px; font-weight: 600; }
+
+        .callout-box { background-color: rgba(0, 214, 188, 0.1); border-left: 6px solid var(--brand-green); padding: 20px; border-radius: 0 12px 12px 0; margin-top: 20px; }
+        .theme-dark .callout-box { background-color: rgba(6, 236, 208, 0.1); border-left-color: var(--vibrant-green); }
+        .callout-box p { margin: 0 0 8px 0; }
+        .callout-box p:last-child { margin: 0; }
+        
+        .shape-blob { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 0; opacity: 0.4; pointer-events: none; }
+        .theme-dark .shape-blob.top { background: var(--dark-green); width: 400px; height: 400px; top: -100px; right: -100px; }
+        .theme-dark .shape-blob.bottom { background: var(--blue-brand); width: 500px; height: 500px; bottom: -150px; left: -100px; }
+        .theme-light .shape-blob.top { background: var(--light-green); width: 600px; height: 600px; top: -200px; right: -200px; opacity: 0.6; }
+        .theme-light .shape-blob.bottom { background: #E2E8F0; width: 400px; height: 400px; bottom: -100px; left: -100px; opacity: 0.5;}
+
+        .slide-container > *:not(.shape-blob) { position: relative; z-index: 1; }
+
+        /* FAQ Horizontal Cards (Slide 9 Fix) */
+        .faq-card {
+            display: flex;
+            flex-direction: row !important;
+            align-items: center;
+            gap: 30px;
+            padding: 25px 30px !important;
+            width: 100%;
+        }
+        .faq-card .icon-wrap {
+            width: 70px;
+            height: 70px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background-color: rgba(6, 236, 208, 0.1);
+            color: var(--vibrant-green);
+            font-size: 36px;
+        }
+
+        /* =========================================================
+           GEMINI AI ASSISTANT STYLES 
+           ========================================================= */
+        #ai-fab {
+            position: fixed; bottom: 40px; right: 40px; width: 70px; height: 70px;
+            background-color: var(--brand-green); color: var(--blue-brand); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 32px;
+            box-shadow: 0 10px 25px rgba(0, 214, 188, 0.4); cursor: pointer; z-index: 1000;
+            transition: transform 0.3s ease, background-color 0.3s ease; border: none; outline: none;
+        }
+        #ai-fab:hover { transform: scale(1.05); background-color: var(--vibrant-green); }
+
+        #ai-panel {
+            position: fixed; bottom: 130px; right: 40px; width: 450px; height: 600px;
+            background-color: var(--pure-white); border-radius: 16px; box-shadow: 0 15px 40px rgba(24, 40, 63, 0.2);
+            z-index: 999; display: flex; flex-direction: column; overflow: hidden;
+            transform: translateY(20px); opacity: 0; pointer-events: none; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            font-family: 'Inter', sans-serif; border: 1px solid var(--slate-300);
+        }
+        #ai-panel.active { transform: translateY(0); opacity: 1; pointer-events: all; }
+
+        .ai-header { background-color: var(--blue-brand); color: var(--pure-white); padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .ai-header h3 { margin: 0; font-size: 20px; display: flex; align-items: center; gap: 8px; }
+        .ai-close { background: none; border: none; color: var(--slate-300); cursor: pointer; font-size: 24px; }
+        .ai-close:hover { color: var(--pure-white); }
+
+        .ai-tabs { display: flex; background-color: var(--slate-100); border-bottom: 1px solid var(--slate-300); }
+        .ai-tab { flex: 1; padding: 12px 0; text-align: center; cursor: pointer; font-weight: 600; color: var(--slate-700); font-size: 14px; border-bottom: 3px solid transparent; transition: all 0.2s ease; }
+        .ai-tab.active { color: var(--blue-brand); border-bottom-color: var(--brand-green); background-color: var(--pure-white); }
+
+        .ai-content { flex: 1; display: none; flex-direction: column; padding: 20px; overflow-y: auto; background-color: var(--pure-white); }
+        .ai-content.active { display: flex; }
+
+        .chat-messages { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; margin-bottom: 15px; }
+        .msg { max-width: 85%; padding: 12px 16px; border-radius: 12px; font-size: 14px; line-height: 1.5; }
+        .msg.user { align-self: flex-end; background-color: var(--light-green); color: var(--blue-brand); border-bottom-right-radius: 4px; }
+        .msg.bot { align-self: flex-start; background-color: var(--slate-100); color: var(--slate-800); border-bottom-left-radius: 4px; }
+        
+        .chat-input-area { display: flex; gap: 10px; }
+        .chat-input-area input { flex: 1; padding: 12px; border: 1px solid var(--slate-300); border-radius: 8px; font-family: 'Inter', sans-serif; outline: none; }
+        .chat-input-area input:focus { border-color: var(--brand-green); }
+        .ai-btn { background-color: var(--brand-green); color: var(--blue-brand); border: none; border-radius: 8px; padding: 0 20px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; transition: background-color 0.2s; font-family: 'Inter', sans-serif; }
+        .ai-btn:hover { background-color: var(--vibrant-green); }
+
+        .jd-textarea { width: 100%; flex: 1; min-height: 150px; border: 1px solid var(--slate-300); border-radius: 8px; padding: 15px; font-family: 'Inter', sans-serif; font-size: 14px; resize: none; margin-bottom: 15px; outline: none; }
+        .jd-textarea:focus { border-color: var(--brand-green); }
+        .jd-result { flex: 1; background-color: var(--slate-100); border-radius: 8px; padding: 15px; font-size: 14px; color: var(--slate-800); overflow-y: auto; display: none; line-height: 1.6; border: 1px solid var(--slate-300); }
+        .jd-result h4 { margin-top: 0; color: var(--blue-brand); }
+
+        .loader { display: none; align-items: center; justify-content: center; gap: 8px; padding: 10px; color: var(--slate-700); font-size: 14px; }
+        .loader.active { display: flex; }
+        .spinner { width: 20px; height: 20px; border: 3px solid rgba(0, 214, 188, 0.3); border-radius: 50%; border-top-color: var(--brand-green); animation: spin 1s ease-in-out infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .msg.bot strong, .jd-result strong { color: var(--blue-brand); }
+        
+        /* Botón de Descarga */
+        #download-fab {
+            position: fixed; bottom: 40px; left: 40px; width: 70px; height: 70px;
+            background-color: var(--blue-brand); color: var(--pure-white); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 32px;
+            box-shadow: 0 10px 25px rgba(24, 40, 63, 0.4); cursor: pointer; z-index: 1000;
+            transition: transform 0.3s ease, background-color 0.3s ease; border: none; outline: none;
+        }
+        #download-fab:hover { transform: scale(1.05); background-color: var(--slate-800); }
+    </style>
+</head>
+<body>
+
+<!-- Slide 1: Título (Blue Brand Theme) -->
+<div class="slide-container theme-dark" id="slide1">
+    <div class="shape-blob top"></div>
+    <div class="shape-blob bottom"></div>
+    
+    <div class="title-layout">
+        <h1>Estrategia de Inclusión<br>Laboral en <span class="highlight">Alegra</span></h1>
+        <p class="subtitle">Análisis de impacto, mitigación de riesgos y plan de acción estratégico ante la Reforma Laboral.</p>
+    </div>
+</div>
+
+<!-- Slide 2: El Contexto (Light Grey Theme) -->
+<div class="slide-container theme-light" id="slide2">
+    <div class="shape-blob top"></div>
+
+    <h2 class="slide-title">El Cambio en las Reglas del <span class="highlight">Juego</span></h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3>¿Por qué hablar de esto hoy?</h3>
+                <p>Históricamente, contratar personas con discapacidad era un "buen acto" corporativo. <strong>Esto cambió.</strong></p>
+                <p>La nueva <strong>Reforma Laboral</strong> transforma esta sugerencia en un mandato estricto para empresas de nuestro tamaño, habilitando plataformas de auditoría directa del gobierno.</p>
+                <div class="callout-box">
+                    <p><strong>En resumen:</strong> Dejó de ser una política opcional de talento para convertirse en un requerimiento de <strong>Compliance Legal</strong> con alto impacto financiero si es ignorado.</p>
+                </div>
+            </div>
+            <div>
+                <div class="image-wrapper">
+                    <!-- Imagen de ejecutivos restaurada y corregida -->
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Directivos reunidos analizando métricas de compliance en laptop">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 3: Cuota para Alegra (Green Brand Theme) -->
+<div class="slide-container theme-green" id="slide3">
+    <div class="shape-blob top" style="background: var(--dark-green);"></div>
+
+    <h2 class="slide-title">Nuestra Cuota Obligatoria en <span class="highlight">Alegra</span></h2>
+    <div class="content-area">
+        <div class="two-column tiled">
+            <div class="card" style="align-items: center; text-align: center; justify-content: center;">
+                <div style="font-size: 130px; font-weight: 800; font-family: 'Lexend', sans-serif; line-height: 1; color: var(--pure-white); margin-bottom: 20px; letter-spacing: -4px;">6 a 7</div>
+                <h3 style="color: var(--blue-brand); font-size: 32px;">Colaboradores</h3>
+                <p style="color: var(--blue-brand); text-align: center; max-width: 80%;">Es la cuota exigida por la nueva ley (2%) calculada matemáticamente sobre nuestra base actual de 310 empleados en Colombia.</p>
+            </div>
+            <div class="card" style="justify-content: center; padding-left: 50px;">
+                <h3 style="color: var(--pure-white); margin-bottom: 30px; font-size: 32px;">Reglas de la Cuota</h3>
+                <ul style="color: var(--blue-brand);">
+                    <li style="margin-bottom: 30px; padding-left: 45px;"><i class="ti ti-ban" style="color: var(--pure-white); font-size: 32px; top: 0;"></i> <strong>No Monetizable:</strong> No está permitido pagar multas o donar a fundaciones para evadir la contratación directa en nómina.</li>
+                    <li style="margin-bottom: 30px; padding-left: 45px;"><i class="ti ti-bulb" style="color: var(--pure-white); font-size: 32px; top: 0;"></i> <strong>Apalancamiento SENA:</strong> Un aprendiz en etapa práctica certificado con discapacidad <strong>cuenta doble</strong> (cubre 2 cupos).</li>
+                    <li style="padding-left: 45px;"><i class="ti ti-file-certificate" style="color: var(--pure-white); font-size: 32px; top: 0;"></i> <strong>Validación Estricta:</strong> Solo son válidas legalmente las personas con Certificado oficial expedido por MinSalud (SISPRO).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4: Riesgos y Sanciones (Blue Brand Theme) -->
+<div class="slide-container theme-dark" id="slide4">
+
+    <h2 class="slide-title">El Riesgo de <span class="highlight">No Cumplir</span></h2>
+    <div class="content-area">
+        <div class="two-column tiled">
+            <div class="card">
+                <div class="icon" style="font-size: 48px; color: var(--vibrant-green); margin-bottom: 20px;"><i class="ti ti-alert-triangle"></i></div>
+                <h3>Sanciones por Incumplimiento</h3>
+                <p>Las multas por no alcanzar la cuota se calculan vía UVT y varían según los activos de la empresa.</p>
+                <ul>
+                    <li><strong>Mínimo:</strong> 2.000 UVT.</li>
+                    <li><strong>Máximo:</strong> Hasta $8.754 Millones COP para grandes contribuyentes.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="icon" style="font-size: 48px; color: var(--vibrant-green); margin-bottom: 20px;"><i class="ti ti-gavel"></i></div>
+                <h3>El "Fuero de Salud" (Despidos)</h3>
+                <p>Desvincular a alguien con discapacidad sin un caso sólido y sin permiso asume legalmente "discriminación".</p>
+                <ul>
+                    <li><strong>El costo:</strong> El juez ordenará el reintegro de la persona.</li>
+                    <li><strong>La multa:</strong> Pago de 180 días de salario como indemnización, más salarios caídos.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 5: La Estrategia de Perfiles (Light Grey Theme) -->
+<div class="slide-container theme-light" id="slide5">
+
+    <h2 class="slide-title">Nuestra Estrategia de <span class="highlight">Acción</span></h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="card tile">
+                <div class="icon"><i class="ti ti-target"></i></div>
+                <h3>1. Perfiles Viables</h3>
+                <p>Nos enfocaremos estratégicamente en <strong>movilidad reducida</strong>, perfil compatible con el desarrollo de software y que no requiere infraestructura física compleja.</p>
+            </div>
+            <div class="card tile">
+                <div class="icon"><i class="ti ti-file-certificate"></i></div>
+                <h3>2. Exigir Certificado</h3>
+                <p>Es requisito indispensable que el empleado tramite el <strong>Certificado del MinSalud</strong> (implica autorreconocimiento voluntario para ser sumado a la cuota).</p>
+            </div>
+            <div class="card tile">
+                <div class="icon"><i class="ti ti-building-community"></i></div>
+                <h3>3. Alianzas Clave</h3>
+                <p>Publicación mandatoria en Servicio Público de Empleo, alianzas con fundaciones expertas y vinculación de aprendices mediante contacto directo con el SENA.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 6: Gestión del Desempeño (Blue Brand Theme) -->
+<div class="slide-container theme-dark" id="slide6">
+
+    <h2 class="slide-title">¿Podemos despedir a alguien que <span class="highlight">no rinde</span>?</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3>La respuesta es SÍ, pero requiere un cambio cultural.</h3>
+                <p>En Alegra solemos desvincular por "ajuste cultural" indemnizando sin causa justa para evitar desgaste. <strong>Esto ya no será posible con este grupo focal.</strong></p>
+                <div class="callout-box">
+                    <p><strong>La regla de oro: Documentación Extrema.</strong></p>
+                    <p>Si el colaborador no rinde, necesitamos pruebas irrefutables de bajo desempeño (One-on-Ones, Dailies, evaluaciones). Solo así demostramos ante un juez que el despido fue por capacidad técnica y no por discriminación.</p>
+                </div>
+            </div>
+            <div>
+                <div class="image-wrapper">
+                    <!-- Imagen de HR actualizada -->
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="HR manager revisando documentación en oficina corporativa">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 7: Retorno de Inversión (Green Brand Theme) -->
+<div class="slide-container theme-green" id="slide7">
+    <div class="shape-blob top" style="background: var(--dark-green);"></div>
+
+    <h2 class="slide-title">El Retorno de Inversión <span class="highlight">(ROI)</span></h2>
+    <div class="content-area">
+        <div class="two-column tiled">
+            <div class="card">
+                <h3><i class="ti ti-percentage" style="font-size: 28px; vertical-align: middle;"></i> Deducción 200% Renta</h3>
+                <p>Impacto directo en el P&amp;G: Podemos deducir en el impuesto sobre la renta el 200% del valor de salarios y prestaciones pagados a estos trabajadores (limitación &gt;25%).</p>
+            </div>
+            <div class="card">
+                <h3><i class="ti ti-gavel" style="font-size: 28px; vertical-align: middle;"></i> Ventaja Competitiva Comercial</h3>
+                <p>Tener una nómina inclusiva certificada otorga hasta 10 puntos adicionales en procesos de licitación pública y contratación estatal. Suele ser el factor decisivo de desempate.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 8: Avances Preventivos en Selección (Light Grey Theme) -->
+<div class="slide-container theme-light" id="slide8">
+    <div class="shape-blob bottom"></div>
+
+    <h2 class="slide-title">Avances preventivos en <span class="highlight">selección</span></h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3 style="color: var(--blue-brand);">Hitos Ejecutados</h3>
+                <ul style="color: var(--slate-700);">
+                    <li><i class="ti ti-world-www" style="color: var(--brand-green);"></i> <strong>Atracción:</strong> Vacante del programa publicada en nuestra Landing Page y en la página pública de empleo de Colombia.</li>
+                    <li><i class="ti ti-building-community" style="color: var(--brand-green);"></i> <strong>Alianzas:</strong> Investigación de fundaciones y contacto con SENA para asesoría en practicantes con discapacidad.</li>
+                    <li><i class="ti ti-gavel" style="color: var(--brand-green);"></i> <strong>Legal:</strong> Asesoría jurídica recibida por parte de nuestro abogado para blindar el proceso.</li>
+                </ul>
+            </div>
+            <div class="card" style="background-color: var(--pure-white); box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid var(--slate-200);">
+                <h3 style="color: var(--blue-brand); font-size: 22px;">Pipeline Actual</h3>
+                <div style="font-size: 80px; font-weight: 800; font-family: 'Lexend'; line-height: 1; margin: 10px 0 0px; color: var(--brand-green);">100</div>
+                <div style="font-size: 16px; font-weight: 600; color: var(--slate-500); text-transform: uppercase; letter-spacing: 1px;">Postulantes Totales</div>
+                
+                <hr style="border: none; border-top: 1px solid var(--slate-200); margin: 20px 0;">
+                
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <div>
+                        <strong style="font-size: 24px; color: var(--blue-brand);">64</strong> 
+                        <span style="color: var(--slate-700);"> Vía Landing Alegra (Directos)</span><br>
+                        <span style="font-size: 14px; color: var(--brand-green); font-weight: 600;">➔ 38 presentan discapacidad física (Perfil Target)</span>
+                    </div>
+                    <div>
+                        <strong style="font-size: 24px; color: var(--blue-brand);">36</strong> 
+                        <span style="color: var(--slate-700);"> Vía Agencia Pública de Empleo (Aparte)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 9: Preguntas Frecuentes (Blue Brand Theme) - REDISEÑADO PARA EVITAR CORTES -->
+<div class="slide-container theme-dark" id="slide9">
+    <div class="shape-blob top"></div>
+
+    <h2 class="slide-title">FAQ de <span class="highlight">Directivos</span></h2>
+    <div class="content-area" style="width: 100%;">
+        <div style="display: flex; flex-direction: column; gap: 20px; width: 100%;">
+            
+            <div class="faq-card card">
+                <div class="icon-wrap"><i class="ti ti-user-minus"></i></div>
+                <div>
+                    <h3 style="margin-bottom: 8px; font-size: 22px;">¿Qué pasa si alguien renuncia hoy?</h3>
+                    <p style="margin: 0; font-size: 17px; line-height: 1.5; color: var(--slate-100);">No hay una sanción automática el día 1. La empresa cuenta con un plazo prudencial (aproximadamente 2 meses) para publicar la vacante, mover el pipeline y cubrir el cupo exigido.</p>
+                </div>
+            </div>
+
+            <div class="faq-card card">
+                <div class="icon-wrap"><i class="ti ti-zoom-exclamation"></i></div>
+                <div>
+                    <h3 style="margin-bottom: 8px; font-size: 22px;">¿Existen excepciones a la norma?</h3>
+                    <p style="margin: 0; font-size: 17px; line-height: 1.5; color: var(--slate-100);">Sí, pero son muy complejas. Se debe justificar técnica y legalmente ante el Ministerio de Trabajo que el <em>core</em> de nuestro negocio hace imposible la inclusión total, lo cual no aplica en nuestra industria.</p>
+                </div>
+            </div>
+
+            <div class="faq-card card">
+                <div class="icon-wrap"><i class="ti ti-briefcase-off"></i></div>
+                <div>
+                    <h3 style="margin-bottom: 8px; font-size: 22px;">¿Aplica el despido "sin justa causa"?</h3>
+                    <p style="margin: 0; font-size: 17px; line-height: 1.5; color: var(--slate-100);">Legalmente sí, pero en la práctica es <strong>altamente riesgoso</strong>. Para evitar millonarias multas por presunta discriminación, cualquier despido siempre debe justificarse con pruebas documentales sólidas de bajo desempeño.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================
+     GEMINI AI INTEGRATION (ASISTENTE EXECUTIVE)
+     ========================================================= -->
+<button id="ai-fab" onclick="toggleAIPanel()" title="Asistente Legal C-Level IA">
+    <i class="ti ti-sparkles"></i>
+</button>
+
+<div id="ai-panel">
+    <div class="ai-header">
+        <h3 class="brand-font"><i class="ti ti-sparkles" style="color: var(--brand-green);"></i> Legal Advisor IA</h3>
+        <button class="ai-close" onclick="toggleAIPanel()"><i class="ti ti-x"></i></button>
+    </div>
+    
+    <div class="ai-tabs">
+        <div class="ai-tab active" onclick="switchTab('chat')">Consultas Directivas</div>
+        <div class="ai-tab" onclick="switchTab('jd')">Mitigación de Riesgos</div>
+    </div>
+
+    <!-- Tab 1: Chatbot Legal -->
+    <div class="ai-content active" id="tab-chat">
+        <div class="chat-messages" id="chat-messages">
+            <div class="msg bot">Hola. Soy el asistente legal de IA entrenado para directores de Alegra. Conozco el progreso de nuestro pipeline (100 candidatos) y la Ley de Discapacidad (Reforma 2025). ¿En qué te asesoro hoy?</div>
+        </div>
+        <div class="loader" id="chat-loader">
+            <div class="spinner"></div> Analizando marco legal...
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ej. ¿Qué pasa si renuncia uno de los 6 hoy?" onkeypress="handleChatEnter(event)">
+            <button class="ai-btn" onclick="sendChatMessage()"><i class="ti ti-send"></i></button>
+        </div>
+    </div>
+
+    <!-- Tab 2: Job Description Checker -->
+    <div class="ai-content" id="tab-jd">
+        <p style="font-size: 14px; color: var(--slate-700); margin-top: 0;">Evalúa si las ofertas publicadas por nuestro equipo de Talent nos exponen a demandas por discriminación, y cómo adaptarlas al "ajuste razonable".</p>
+        
+        <textarea class="jd-textarea" id="jd-input" placeholder="Pega el borrador de la oferta de trabajo aquí..."></textarea>
+        
+        <div class="loader" id="jd-loader">
+            <div class="spinner"></div> Auditando compliance...
+        </div>
+        
+        <div class="jd-result" id="jd-result"></div>
+        
+        <button class="ai-btn" id="jd-btn" onclick="analyzeJD()" style="width: 100%; padding: 15px;">✨ Ejecutar Auditoría</button>
+    </div>
+</div>
+
+<!-- Botón de Descarga HTML -->
+<button id="download-fab" onclick="downloadHTML()" title="Descargar Presentación">
+    <i class="ti ti-download"></i>
+</button>
+
+<script>
+    // Configuración API Gemini
+    const apiKey = ""; // MUST BE EMPTY STRING
+    const MODEL_NAME = "gemini-2.5-flash-preview-09-2025";
+    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${apiKey}`;
+
+    // Prompts de Sistema Enfocados en C-Level
+    const CHAT_SYSTEM_PROMPT = `Eres un Legal Advisor especializado en compliance laboral en Colombia (Reforma 2025, Ley 361) asesorando a la junta directiva (C-Level) de la empresa tecnológica 'Alegra' (310 empleados). 
+    Tu tono es sumamente ejecutivo, directo, enfocado en manejo de riesgos y finanzas. 
+    CONTEXTO ACTUAL DE SELECCIÓN: Alegra ya tiene un pipeline de 100 candidatos (64 directos, de los cuales 38 son perfil físico target, y 36 desde Agencia Pública de Empleo). Ya hubo asesoría legal y con el SENA.
+    REGLAS:
+    1. Alegra necesita contratar de 6 a 7 personas (2% de cuota). Aprendices SENA cuentan doble.
+    2. Riesgo financiero: Multas superan los 8.700 Millones COP. Reintegros forzosos + 180 días de multa si hay despidos sin documentar bajo desempeño.
+    3. No monetizable: No hay forma de pagar para evadir la norma.
+    4. Certificación: Exclusivamente emitida por Sec. de Salud (no sirve EPS sola).
+    Habla en términos de "mitigación de riesgos", "impacto en P&G", "compliance". Respuestas en 1-2 párrafos cortos.`;
+    
+    const JD_SYSTEM_PROMPT = `Eres un auditor legal de Diversidad e Inclusión. Analizas ofertas de trabajo de 'Alegra' para evitar exposición a demandas por discriminación y asegurar cumplimiento de la Ley 1618.
+    Identifica frases de alto riesgo legal (ej. "excelente presentación", límites de edad). Reescribe la oferta para blindar legalmente a la empresa y promover "ajustes razonables". Responde con estructura ejecutiva: "Riesgo Detectado" y "Texto Homologado".`;
+
+    // UI Logic
+    function toggleAIPanel() {
+        const panel = document.getElementById('ai-panel');
+        panel.classList.toggle('active');
+    }
+
+    function switchTab(tabName) {
+        document.querySelectorAll('.ai-tab').forEach(tab => tab.classList.remove('active'));
+        document.querySelectorAll('.ai-content').forEach(content => content.classList.remove('active'));
+        
+        if (tabName === 'chat') {
+            document.querySelectorAll('.ai-tab')[0].classList.add('active');
+            document.getElementById('tab-chat').classList.add('active');
+        } else {
+            document.querySelectorAll('.ai-tab')[1].classList.add('active');
+            document.getElementById('tab-jd').classList.add('active');
+        }
+    }
+
+    // Funciones Helper
+    function formatMarkdown(text) {
+        return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                   .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                   .replace(/\n/g, '<br>');
+    }
+
+    async function callGeminiAPI(prompt, systemInstruction) {
+        const payload = {
+            contents: [{ parts: [{ text: prompt }] }],
+            systemInstruction: { parts: [{ text: systemInstruction }] }
+        };
+
+        let retries = 5;
+        let delay = 1000;
+
+        while (retries > 0) {
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) throw new Error(`API Error: ${response.status}`);
+
+                const data = await response.json();
+                return data.candidates?.[0]?.content?.parts?.[0]?.text || "Lo siento, no pude procesar la consulta.";
+            } catch (error) {
+                retries--;
+                if (retries === 0) return "Fallo de conexión. Reintente.";
+                await new Promise(resolve => setTimeout(resolve, delay));
+                delay *= 2;
+            }
+        }
+    }
+
+    // Chat Feature
+    function handleChatEnter(e) {
+        if (e.key === 'Enter') sendChatMessage();
+    }
+
+    async function sendChatMessage() {
+        const input = document.getElementById('chat-input');
+        const text = input.value.trim();
+        if (!text) return;
+
+        const messagesContainer = document.getElementById('chat-messages');
+        const loader = document.getElementById('chat-loader');
+
+        const userDiv = document.createElement('div');
+        userDiv.className = 'msg user';
+        userDiv.textContent = text;
+        messagesContainer.appendChild(userDiv);
+        
+        input.value = '';
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        loader.classList.add('active');
+
+        const responseText = await callGeminiAPI(text, CHAT_SYSTEM_PROMPT);
+
+        loader.classList.remove('active');
+        const botDiv = document.createElement('div');
+        botDiv.className = 'msg bot';
+        botDiv.innerHTML = formatMarkdown(responseText);
+        messagesContainer.appendChild(botDiv);
+        
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    // JD Checker Feature
+    async function analyzeJD() {
+        const input = document.getElementById('jd-input');
+        const text = input.value.trim();
+        const resultContainer = document.getElementById('jd-result');
+        const loader = document.getElementById('jd-loader');
+        const btn = document.getElementById('jd-btn');
+
+        if (!text) {
+            resultContainer.innerHTML = "<p style='color: #ef4444;'>Ingrese un texto a auditar.</p>";
+            resultContainer.style.display = 'block';
+            return;
+        }
+
+        input.style.display = 'none';
+        btn.style.display = 'none';
+        resultContainer.style.display = 'none';
+        loader.classList.add('active');
+
+        const responseText = await callGeminiAPI(`Audita la siguiente publicación de vacante: \n\n"${text}"`, JD_SYSTEM_PROMPT);
+
+        loader.classList.remove('active');
+        resultContainer.innerHTML = `<h4>✨ Resultado de la Auditoría Legal:</h4>${formatMarkdown(responseText)}`;
+        resultContainer.style.display = 'block';
+        
+        btn.textContent = "Auditar Nueva Publicación";
+        btn.style.display = 'block';
+        btn.onclick = () => {
+            input.value = '';
+            input.style.display = 'block';
+            resultContainer.style.display = 'none';
+            btn.textContent = "✨ Ejecutar Auditoría";
+            btn.onclick = analyzeJD;
+        };
+    }
+
+    // Función para descargar el archivo HTML
+    function downloadHTML() {
+        const htmlContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+        const blob = new Blob([htmlContent], { type: "text/html;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "Estrategia_Inclusion_Alegra.html";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+</script>
+
+
+</body></html>
